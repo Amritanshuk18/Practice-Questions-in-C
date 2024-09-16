@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int num,key,a,count=0;
+    printf("Enter the number : ");
+    scanf("%d",&num);
+    printf("Enter the key digit : ");
+    scanf("%d",&key);
+    while(num>0)
+    {
+        a=num%10;
+        if(a==key)
+        {
+            count++;
+        }
+        num = num/10;
+    }
+    printf("The occurrence of key digit in the number = %d",count);
+}
