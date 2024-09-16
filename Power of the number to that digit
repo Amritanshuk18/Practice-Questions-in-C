@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int number,digit,i,power=1;
+    printf("Enter the number : ");
+    scanf("%d",&number);
+    printf("Enter the digit : ");
+    scanf("%d",&digit);
+    if(number<0 || digit<0)
+    {
+        printf("Invalid input!!!!!!");
+    }
+    else
+    {
+        while(digit!=0)
+        {
+            power = power*number;
+            digit--;
+        }
+        printf("Power will be %d",power);
+    }
+}
