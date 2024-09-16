@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int choice;
+    printf("Enter the choice : \n");
+    printf("1.Factorial\n2.Square\n3.Exit\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+        int a,i,fact=1;
+        printf("Enter the number : ");
+        scanf("%d",&a);
+        for(i=1;i<=a;i++)
+        {
+            fact=fact*i;
+        }
+        printf("%d",fact);
+        break;
+        
+        case 2:
+        int b;
+        printf("Enter the number : ");
+        scanf("%d",&b);
+        printf("Square of the number will be %d",b*b);
+        break;
+        
+        case 3:
+        printf("Thank you!!!!");
+        break;
+        
+        default:
+        printf("Choose the correct option.....");
+        break;
+    }
+}
