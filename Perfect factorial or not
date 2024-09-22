@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int i,num,fact=1;
+    printf("Enter the number : ");
+    scanf("%d",&num);
+    for(i=1;i<=100;i++)
+    {
+        fact=fact*i;
+        if(fact==num)
+        {
+            printf("Your number %d is a perfect factorial of %d",num,i);
+            break;
+        }
+        if(fact>num)
+        {
+            printf("Your number %d is not a perfect factorial!!!!!",num);
+            break;
+        }
+    }
+    return 0;
+}
