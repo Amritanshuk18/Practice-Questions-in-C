@@ -1,0 +1,50 @@
+#include<stdio.h>
+void factorial(int);
+void square(int);
+int main()
+{
+    int a,choice,i=0;
+    char ch;
+    do
+    {
+        printf("You already done this part %d time before\n",i);
+        printf("Enter your choice :\n");
+        printf("1.Factorial\n2.Square\n");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1 :
+            factorial(a);
+            break;
+            case 2 :
+            square(a);
+            break;
+            default :
+            printf("Enter the correct option!!!!!");
+            break;
+        }
+        i++;
+        printf("\nDo you want more operations [Y/N] : ");
+        scanf(" %c",&ch);
+    }
+    while(ch=='Y'||ch=='y');
+    printf("\nThank You....");
+    return 0;
+}
+void factorial(int a)
+{
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    int i,fact=1;
+    for(i=1;i<=a;i++)
+    {
+        fact=fact*i;
+    }
+    printf("Factorial of your number %d is = %d\n",a,fact);
+}
+void square(int a)
+{
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    printf("The Square of your number %d will be : %d\n",a,a*a);
+}
